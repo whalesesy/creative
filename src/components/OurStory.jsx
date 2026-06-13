@@ -47,16 +47,7 @@ export default function OurStory() {
 
       <div className="relative mt-12" style={{ minHeight: 500 }}>
         {/* 3D Glowing central line */}
-        <div style={{
-          position: 'absolute',
-          left: '50%',
-          top: 0, bottom: 0,
-          width: 4,
-          transform: 'translateX(-50%)',
-          background: 'linear-gradient(to bottom, transparent, var(--color-primary), var(--color-secondary), var(--color-primary), transparent)',
-          boxShadow: '0 0 16px rgba(var(--color-primary-rgb),0.4)',
-          zIndex: 1,
-        }} />
+        <div className="timeline-line" />
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '5rem' }}>
           {loveConfig.timeline.map((item, index) => {
@@ -72,13 +63,7 @@ export default function OurStory() {
                 whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
                 viewport={{ once: true, margin: '-80px' }}
                 transition={{ duration: 0.8, type: 'spring', stiffness: 70, delay: index * 0.08 }}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  width: '100%',
-                  position: 'relative',
-                  justifyContent: isLeft ? 'flex-start' : 'flex-end',
-                }}
+                className={`timeline-item ${isLeft ? 'left' : 'right'}`}
               >
                 {/* 3D Glowing Node */}
                 <motion.div
@@ -91,25 +76,17 @@ export default function OurStory() {
                     scale: [1, 1.15, 1],
                   }}
                   transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut', delay: index * 0.3 }}
+                  className="timeline-node"
                   style={{
-                    position: 'absolute',
-                    left: 'calc(50% - 22px)',
-                    width: 44, height: 44,
-                    borderRadius: '50%',
                     background: `radial-gradient(circle at 35% 35%, white, ${color})`,
                     border: `3px solid ${color}`,
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    zIndex: 10,
-                    fontSize: '1.2rem',
-                    cursor: 'default',
-                    transformStyle: 'preserve-3d',
                   }}
                 >
                   {icon}
                 </motion.div>
 
                 {/* 3D Tilted Scrapbook Card */}
-                <div style={{ width: '44%', marginLeft: isLeft ? '3rem' : 0, marginRight: isLeft ? 0 : '3rem' }}>
+                <div className="timeline-card-wrap">
                   <Tilt3D maxTilt={14} scale={1.05} className="glass-card" style={{
                     borderRadius: 18,
                     borderBottom: `4px solid ${color}`,

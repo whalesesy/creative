@@ -37,8 +37,7 @@ export default function ThingsILove() {
       {/* Main Interactive Heart Flip Card */}
       <div className="flex flex-col items-center justify-center mt-10">
         <div 
-          className="relative w-[320px] h-[320px] cursor-pointer"
-          style={{ perspective: '1000px' }}
+          className="reasons-card-container"
           onClick={() => setIsFlipped(!isFlipped)}
         >
           <motion.div
@@ -64,10 +63,10 @@ export default function ThingsILove() {
                 transition={{ duration: 1.5, repeat: Infinity }}
                 className="text-red-500 mb-6"
               >
-                <Heart size={90} className="fill-current drop-shadow-md" />
+                <Heart size={100} className="fill-current drop-shadow-md" />
               </motion.div>
-              <h3 className="text-xl font-bold text-red-500 mb-2">Reason #{currentReasonIdx + 1}</h3>
-              <p className="text-sm text-gray-500 italic">Click to open my heart</p>
+              <h3 className="text-2xl font-bold text-red-500 mb-2">Reason #{currentReasonIdx + 1}</h3>
+              <p className="text-base text-gray-500 italic">Click to open my heart</p>
             </div>
 
             {/* Back Side: The Love Reason */}
@@ -83,10 +82,10 @@ export default function ThingsILove() {
               <div className="absolute top-4 right-4 text-red-300 opacity-30">
                 <Sparkles size={24} />
               </div>
-              <Heart size={32} className="text-red-400 fill-red-400 mb-4" />
+              <Heart size={36} className="text-red-400 fill-red-400 mb-4" />
               <p 
-                className="handwritten text-gray-800 leading-normal mb-4 text-2xl"
-                style={{ fontSize: '1.7rem', color: 'var(--color-text)' }}
+                className="handwritten text-gray-800 leading-normal mb-4"
+                style={{ fontSize: 'clamp(1.6rem, 5vw, 2.3rem)', color: 'var(--color-text)' }}
               >
                 {loveConfig.reasons[currentReasonIdx]}
               </p>
@@ -112,7 +111,7 @@ export default function ThingsILove() {
         <h4 className="text-center font-bold text-lg mb-6" style={{ color: 'var(--color-text-muted)', fontFamily: 'var(--font-serif)' }}>
           Click a heart to unlock a specific reason:
         </h4>
-        <div className="flex flex-wrap gap-2 justify-center max-h-[160px] overflow-y-auto p-4 glass-card bg-opacity-30 border-opacity-20">
+        <div className="reasons-heart-grid glass-card bg-opacity-30 border-opacity-20">
           {loveConfig.reasons.map((_, idx) => (
             <button
               key={idx}

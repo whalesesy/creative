@@ -240,7 +240,7 @@ export default function Soundtrack() {
         </div>
 
         {/* Right Side: Spotify Embed Widget */}
-        <div className="glass-card p-6 flex flex-col items-center">
+        <div className="glass-card p-6 flex flex-col items-center soundtrack-spotify-card">
           <h3 className="text-xl font-bold mb-4 flex items-center gap-2" style={{ fontFamily: 'var(--font-serif)', color: 'var(--color-text)' }}>
             <span>🎵 Live Spotify Integration</span>
           </h3>

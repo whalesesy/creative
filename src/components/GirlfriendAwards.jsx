@@ -51,7 +51,10 @@ export default function GirlfriendAwards() {
               style={{ transformStyle:'preserve-3d', height: '100%' }}
             >
             {/* Ribbon Background Sparkle */}
-            <div className="absolute top-2 right-2 text-yellow-500 opacity-20">
+            <div 
+              className="absolute top-2 right-2"
+              style={{ color: '#f5c53b', opacity: 0.2 }}
+            >
               <Star size={40} className="fill-current" />
             </div>
 

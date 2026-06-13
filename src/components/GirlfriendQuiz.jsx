@@ -204,13 +204,21 @@ export default function GirlfriendQuiz() {
           max-w: 42rem;
         }
         .min-h-\\[400px\\] {
-          min-h: 400px;
+          min-height: 400px;
         }
         .shrink-0 {
           flex-shrink: 0;
         }
         .inline-flex {
           display: inline-flex;
+        }
+        @media (max-width: 640px) {
+          .glass-card.p-8 {
+            padding: 1.5rem 1rem !important;
+          }
+          .min-h-\\[400px\\] {
+            min-height: auto !important;
+          }
         }
       `}</style>
     </section>

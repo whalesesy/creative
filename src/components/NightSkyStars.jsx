@@ -116,7 +116,7 @@ export default function NightSkyStars() {
                 </p>
               </motion.div>
             ) : (
-              <div className="p-6 text-center text-gray-500 italic text-sm">
+              <div className="glass-card p-4 text-center text-gray-300 italic text-sm bg-black bg-opacity-40 border-white border-opacity-10">
                 No star selected yet. Click a star above to read its secret message.
               </div>
             )}

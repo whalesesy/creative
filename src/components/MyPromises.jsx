@@ -30,7 +30,10 @@ export default function MyPromises() {
       <div className="max-w-2xl mx-auto mt-12 glass-card p-8 md:p-12 relative overflow-hidden" style={{ borderLeft: '6px double var(--color-primary)' }}>
         
         {/* Decorative corner leaves/vines */}
-        <div className="absolute -top-6 -right-6 text-pink-400 opacity-10">
+        <div 
+          className="absolute -top-6 -right-6 text-pink-400 opacity-10"
+          style={{ pointerEvents: 'none', zIndex: 0 }}
+        >
           <Heart size={120} className="fill-current" />
         </div>
 
