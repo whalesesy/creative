@@ -505,16 +505,16 @@ export const loveConfig = {
     subtitle: "Because our love is as silly as it is romantic! 😂",
     items: [
       {
-        title: "The ",
-        desc: "When I told that terrible pun and you snorted latte all over the table. The cutest mess ever."
+        title: "The pun ",
+        desc: "When I told that terrible pun and you said it was cute "
       },
       {
-        title: "Pigeon Attack!",
-        desc: "That romantic park walk where you tried to feed the birds and they decided to climb your hair."
+        title: "Laughing Attack",
+        desc: "Times when we couldn't stop laughing at that chekaaaaaaa word."
       },
       {
-        title: "The 2 AM Grocery Quest",
-        desc: "Wandering the aisles in pajamas searching for that one specific flavor of ice cream, laughing at absolutely nothing."
+        title: "The Udaku quest",
+        desc: "Am not that of a mdaku but babyyyyyyyy... Sijakuambiaaaa."
       },
       {
         title: "Our Secret Language",
