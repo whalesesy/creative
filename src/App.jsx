@@ -13,13 +13,10 @@ import LifeChange from './components/LifeChange';
 import GirlfriendAwards from './components/GirlfriendAwards';
 import GirlfriendQuiz from './components/GirlfriendQuiz';
 import ThingsILove from './components/ThingsILove';
-import MemoryLane from './components/MemoryLane';
 import LoveLetters from './components/LoveLetters';
-import Soundtrack from './components/Soundtrack';
 import LittleThings from './components/LittleThings';
 import FutureTogether from './components/FutureTogether';
 import OpenWhen from './components/OpenWhen';
-import VoiceNotes from './components/VoiceNotes';
 import FunnyMoments from './components/FunnyMoments';
 import NightSkyStars from './components/NightSkyStars';
 import MyPromises from './components/MyPromises';
@@ -90,13 +87,10 @@ export default function App() {
     { name: 'Awards',     emoji: '🏅', component: <GirlfriendAwards /> },
     { name: 'Quiz',       emoji: '❓', component: <GirlfriendQuiz /> },
     { name: '100 Reasons',emoji: '💯', component: <ThingsILove /> },
-    { name: 'Scrapbook',  emoji: '📷', component: <MemoryLane /> },
     { name: 'Letters',    emoji: '💌', component: <LoveLetters /> },
-    { name: 'Music',      emoji: '🎵', component: <Soundtrack /> },
     { name: 'Details',    emoji: '🔍', component: <LittleThings /> },
     { name: 'Dreams',     emoji: '🌟', component: <FutureTogether /> },
     { name: 'Open When',  emoji: '💡', component: <OpenWhen /> },
-    { name: 'Voice',      emoji: '🎤', component: <VoiceNotes /> },
     { name: 'Jokes',      emoji: '😂', component: <FunnyMoments /> },
     { name: 'Stars',      emoji: '🌌', component: <NightSkyStars /> },
     { name: 'Promises',   emoji: '🤝', component: <MyPromises /> },
